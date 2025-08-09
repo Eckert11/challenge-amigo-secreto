@@ -2,3 +2,8 @@
 
 // Variable de tipo array, que almacenará los nombres de los amigos ingresados.
 let amigos = []
+
+// Función para agregar amigos
+function Agregaramigo(){
+
+}
