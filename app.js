@@ -4,6 +4,7 @@
 let amigos = []
 
 // Función para agregar amigos
-function Agregaramigo(){
-
+function Agregaramigo() {
+    //Capturar el valor de entrada
+    const input = document.getElementById('amigo');
 }
