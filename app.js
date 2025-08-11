@@ -5,7 +5,7 @@ let amigos = []
 
 // Función para limpiar la caja.
     function limpiarCampo() {
-        const input = document. getElementById('amigo');
+        const input = document.getElementById('amigo');
         input.value = '';
     }
 
@@ -25,6 +25,11 @@ function Agregaramigo() {
     amigos.push(amigo); // Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombres de amigos usando el método .push()
     // Limpiar el campo de entrada: Despuès de añadir el nombre, restablecer el campo de texto a una cadena vacia.
     limpiarCampo();
+}
 
-
+// Función para actualizar la lista de amigos. Crea una función que recorra el array amigos y agregue cada nombre como un elmento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos. 
+function actualizarListaAmigos() {
+    // Obtener el elemento de la lista: Utilizar document.getElementById() o document.queryselector() para seleccionar la lista donde se mostrarán los amigos. 
+    let lista = document.getElementById('listaAmigos')
+    
 }
