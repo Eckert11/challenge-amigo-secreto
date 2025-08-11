@@ -30,6 +30,8 @@ function Agregaramigo() {
 // Función para actualizar la lista de amigos. Crea una función que recorra el array amigos y agregue cada nombre como un elmento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos. 
 function actualizarListaAmigos() {
     // Obtener el elemento de la lista: Utilizar document.getElementById() o document.queryselector() para seleccionar la lista donde se mostrarán los amigos. 
-    let lista = document.getElementById('listaAmigos')
+    let lista = document.getElementById('listaAmigos');
+    //Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar 
+    lista.innerHTML = "";
     
 }
