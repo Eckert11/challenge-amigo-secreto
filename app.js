@@ -33,5 +33,13 @@ function actualizarListaAmigos() {
     let lista = document.getElementById('listaAmigos');
     //Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar 
     lista.innerHTML = "";
+
+    let elementosLi = []; // Se usa push para almacenar cada <li> como string
+    // Iterar sobre el arreglo: Usa un bucle for para recorrer el arreglo amigos y crear elementos de lista (<li>) para cada título
+    for (let i = 0; i < amigos.length; i++) {
+        elementosLi.push `<li>${amigos[i]}</li>`;
+    }
+    // Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista. 
+    lista.innerHTML = elementosLi.join('');
     
 }
