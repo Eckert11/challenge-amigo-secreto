@@ -43,3 +43,10 @@ function actualizarListaAmigos() {
     lista.innerHTML = elementosLi.join('');
     
 }
+// Implementa una función para sortear los amigos. Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos, Usa Math.random() y Math.floor() para obtener un ìndice aleatorio
+function sortearAmigos () {
+    let amigoSorteado = Math.floor(Math.random() *numeroMaximo)+1;
+
+
+
+}
