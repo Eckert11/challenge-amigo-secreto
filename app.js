@@ -23,8 +23,8 @@ function Agregaramigo() {
     }
 
     amigos.push(amigo); // Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombres de amigos usando el método .push()
-    // Limpiar el campo de entrada: Despuès de añadir el nombre, restablecer el campo de texto a una cadena vacia.
-    limpiarCampo();
+    limpiarCampo(); // Limpiar el campo de entrada: Despuès de añadir el nombre, restablecer el campo de texto a una cadena vacia.
+    actualizarListaAmigos(); // Mostrar lista
 }
 
 // Función para actualizar la lista de amigos. Crea una función que recorra el array amigos y agregue cada nombre como un elmento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos. 
@@ -45,8 +45,20 @@ function actualizarListaAmigos() {
 }
 // Implementa una función para sortear los amigos. Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos, Usa Math.random() y Math.floor() para obtener un ìndice aleatorio
 function sortearAmigos () {
-    let amigoSorteado = Math.floor(Math.random() *numeroMaximo)+1;
+    // Validar que haya amigos disponibles. 
+    if (amigos.length === 0){
+        alert("No hay amigos para sortear");
+        return;
+    }
 
+    // Generar un índice aleatorio
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
 
+    // Obtener el nombre sorteado
+    let amigoSorteado = amigos[indiceAleatorio];
 
+    // Mostrara el resultado en el HTML
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li> El amigo sorteado es: <strong>${amigoSorteado}</strong><li>`;
 }
+  
