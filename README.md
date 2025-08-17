@@ -2,7 +2,7 @@
 
 Aplicación web interactiva que permite a los usuarios ingresar nombres de amigos en una lista y realizar un sorteo aleatorio para descubrir quién es el **amigo secreto**.
 
-![Amigo Secreto Portada](assets/amigo-secreto-banner.png)
+![Amigo Secreto Portada](assets/Amigo-secreto-banner.png)
 
 ---
 
@@ -36,5 +36,8 @@ El flujo de la aplicación es el siguiente:
 ![Demo sorteo](assets/demo-draw.png)
 
 ---
-
+## 🛠️ Tecnologías utilizadas
+  -HTML5 – estructura de la aplicación.
+  -CSS3 – estilos y diseño responsivo.
+  -JavaScript (Vanilla) – lógica de programación y manipulación del DOM.
 
