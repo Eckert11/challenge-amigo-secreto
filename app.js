@@ -1,23 +1,19 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-// Variable de tipo array, que almacenará los nombres de los amigos ingresados.
-let amigos = []
+let amigos = [] // Variable de tipo array, que almacenará los nombres de los amigos ingresados.
 
 // Función para limpiar la caja.
-    function limpiarCampo() {
+function limpiarCampo() { 
         const input = document.getElementById('amigo');
         input.value = '';
-    }
+}
 
 // Función para agregar amigos : Permitirà al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos del arreglo.
-function Agregaramigo() {
-    // Capturar el valor de entrada : Usar document.getElementById o document.queryselector para obtener el texto ingresado por el usuario.
-    const input = document.getElementById('amigo');
-    // Obtener texto sin espacios al inicio o al final
-    const amigo = input.value.trim();
+function agregarAmigo() { 
+    const input = document.getElementById('amigo'); // Capturar el valor de entrada : Usar document.getElementById o document.queryselector para obtener el texto ingresado por el usuario.
+    const amigo = input.value.trim();  // Obtener texto sin espacios al inicio o al final
 
-    // Validar la entrada: Implementar una validación para asegurarse de que el campo no esté vacio. Si está vacio, mostrar un alert con un mensaje de error: "Por favor, inserte un nombre"
-    if (amigo === '') {
+    if (amigo === '') { // Validar la entrada: Implementar una validación para asegurarse de que el campo no esté vacio. Si está vacio, mostrar un alert con un mensaje de error: "Por favor, inserte un nombre"
         alert('Por favor, inserte un nombre');
         return;
     }
@@ -27,38 +23,30 @@ function Agregaramigo() {
     actualizarListaAmigos(); // Mostrar lista
 }
 
-// Función para actualizar la lista de amigos. Crea una función que recorra el array amigos y agregue cada nombre como un elmento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos. 
-function actualizarListaAmigos() {
-    // Obtener el elemento de la lista: Utilizar document.getElementById() o document.queryselector() para seleccionar la lista donde se mostrarán los amigos. 
-    let lista = document.getElementById('listaAmigos');
-    //Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar 
-    lista.innerHTML = "";
-
+// Función para actualizar la lista de amigos. Crea una función que recorra el array amigos y agregue cada nombre como un elmento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
+function actualizarListaAmigos() {  
+    let lista = document.getElementById('listaAmigos'); // Obtener el elemento de la lista: Utilizar document.getElementById() o document.queryselector() para seleccionar la lista donde se mostrarán los amigos.
+    lista.innerHTML = ""; //Limpiar la lista existente: Establecer lista.innerHTML = "" para asegurarse de que no haya duplicados al actualizar
     let elementosLi = []; // Se usa push para almacenar cada <li> como string
-    // Iterar sobre el arreglo: Usa un bucle for para recorrer el arreglo amigos y crear elementos de lista (<li>) para cada título
-    for (let i = 0; i < amigos.length; i++) {
-        elementosLi.push `<li>${amigos[i]}</li>`;
-    }
-    // Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista. 
-    lista.innerHTML = elementosLi.join('');
     
+    for (let i = 0; i < amigos.length; i++) {    // Iterar sobre el arreglo: Usa un bucle for para recorrer el arreglo amigos y crear elementos de lista (<li>) para cada título
+        elementosLi.push(`<li>${amigos[i]}</li>`);
+    }
+    lista.innerHTML = elementosLi.join('');     // Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista. 
 }
+
 // Implementa una función para sortear los amigos. Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos, Usa Math.random() y Math.floor() para obtener un ìndice aleatorio
-function sortearAmigos () {
-    // Validar que haya amigos disponibles. 
-    if (amigos.length === 0){
+function sortearAmigo () { 
+    if (amigos.length === 0){     // Validar que haya amigos disponibles. 
         alert("No hay amigos para sortear");
         return;
     }
 
-    // Generar un índice aleatorio
-    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length); // Generar un índice aleatorio
 
-    // Obtener el nombre sorteado
-    let amigoSorteado = amigos[indiceAleatorio];
+    let amigoSorteado = amigos[indiceAleatorio];     // Obtener el nombre sorteado
 
-    // Mostrara el resultado en el HTML
-    let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<li> El amigo sorteado es: <strong>${amigoSorteado}</strong><li>`;
+    let resultado = document.getElementById('resultado');     // Mostrara el resultado en el HTML
+    resultado.innerHTML = `<li> El amigo sorteado es: <strong>${amigoSorteado}</strong></li>`;
 }
   
