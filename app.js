@@ -17,6 +17,11 @@ function agregarAmigo() {
         alert('Por favor, inserte un nombre');
         return;
     }
+    // Validar que contenga solso letras y espacios
+    if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(amigo)) {
+        alert('Por favor, ingrese un nombre válido (solo letras y espacios)');
+        return;
+    }
 
     amigos.push(amigo); // Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que almacena los nombres de amigos usando el método .push()
     limpiarCampo(); // Limpiar el campo de entrada: Despuès de añadir el nombre, restablecer el campo de texto a una cadena vacia.
@@ -49,4 +54,5 @@ function sortearAmigo () {
     let resultado = document.getElementById('resultado');     // Mostrara el resultado en el HTML
     resultado.innerHTML = `<li> El amigo sorteado es: <strong>${amigoSorteado}</strong></li>`;
 }
+
   
