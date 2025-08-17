@@ -37,7 +37,10 @@ El flujo de la aplicación es el siguiente:
 
 ---
 ## 🛠️ Tecnologías utilizadas
-  -HTML5 – estructura de la aplicación.
-  -CSS3 – estilos y diseño responsivo.
-  -JavaScript (Vanilla) – lógica de programación y manipulación del DOM.
+
+- **HTML5**: estructura de la aplicación.  
+- **CSS3**: estilos y diseño responsivo.  
+- **JavaScript**: lógica de programación y manipulación del DOM.
+
+---
 
